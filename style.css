@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+--bg: #0b0c0c;
+--surface: #f7fbfb;
+--purple: #12d7da;
+--white: #797887;
+--muted: #2695ea;
+--border: #282833;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  }
+
+body {
+background: var(--bg);
+color: var(--white);
+font-family: 'Poppins', sans-serif;
+line-height: 1.7;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 22px 9%;
+background: rgba(8, 8, 13, 0.95);
+border-bottom: 1px solid var(--border);
+}
+
+.logo {
+font-size: 25px;
+font-weight: 800;
+letter-spacing: 2px;
+}
+
+.logo span,
+h1 span,
+h2 span {
+color: var(--purple);
+}
+
+nav {
+display: flex;
+gap: 27px;
+}
+
+nav a {
+color: var(--muted);
+font-size: 13px;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: var(--purple);
+}
+
+/* HERO */
+
+.hero {
+min-height: 85vh;
+padding: 80px 12%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 60px;
+}
+
+.hero-text {
+max-width: 580px;
+}
+
+.intro,
+.section-label {
+color: var(--purple);
+font-size: 11px;
+letter-spacing: 4px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-size: clamp(40px, 5vw, 65px);
+font-weight: 800;
+line-height: 1.2;
+}
+
+.hero h2 {
+margin-top: 15px;
+font-size: 21px;
+font-weight: 500;
+}
+
+.description {
+color: var(--muted);
+margin: 22px 0 30px;
+font-size: 14px;
+line-height: 2;
+}
+
+.hero-buttons {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.btn {
+display: inline-block;
+padding: 12px 23px;
+border-radius: 7px;
+font-size: 12px;
+font-weight: 600;
+margin: 5px;
+transition: 0.3s;
+}
+
+.primary {
+background: var(--purple);
+color: white;
+}
+
+.primary:hover {
+background: #9333ea;
+transform: translateY(-3px);
+box-shadow: 0 8px 25px #a855f733;
+}
+
+.secondary {
+border: 1px solid var(--border);
+color: white;
+}
+
+.secondary:hover {
+border-color: var(--purple);
+color: var(--purple);
+}
+
+/* FOTO PROFIL */
+
+.hero-photo {
+width: 320px;
+height: 380px;
+flex-shrink: 0;
+position: relative;
+}
+
+.hero-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+border-radius: 18px;
+border: 2px solid var(--purple);
+position: relative;
+z-index: 2;
+background: var(--surface);
+}
+
+.photo-decoration {
+position: absolute;
+width: 100%;
+height: 100%;
+border: 2px solid var(--purple);
+border-radius: 18px;
+top: 15px;
+left: 15px;
+z-index: 1;
+}
+
+/* SECTION UMUM */
+
+.section {
+padding: 100px 12%;
+text-align: center;
+}
+
+.section h2 {
+font-size: 35px;
+margin-bottom: 20px;
+}
+
+.section-description {
+color: var(--muted);
+font-size: 13px;
+margin: 0 auto;
+max-width: 600px;
+}
+
+.about,
+.contact {
+background: var(--surface);
+}
+
+.about-content {
+max-width: 750px;
+margin: 25px auto 35px;
+}
+
+.about-content p {
+color: var(--muted);
+font-size: 14px;
+line-height: 2;
+}
+
+/* BIODATA */
+
+.biodata {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+max-width: 750px;
+margin: 35px auto 0;
+}
+
+.bio-card {
+text-align: left;
+background: var(--bg);
+padding: 20px;
+border: 1px solid var(--border);
+border-radius: 9px;
+}
+
+.bio-card span {
+color: var(--purple);
+font-size: 11px;
+}
+
+.bio-card h3 {
+font-size: 14px;
+margin-top: 5px;
+overflow-wrap: anywhere;
+}
+
+/* HOBI DAN SKILL */
+
+.card-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 45px;
+text-align: left;
+}
+
+.card {
+padding: 30px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 12px;
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-6px);
+border-color: var(--purple);
+box-shadow: 0 10px 30px #a855f710;
+}
+
+.card-icon {
+font-size: 32px;
+margin-bottom: 15px;
+}
+
+.card h3 {
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.card p {
+color: var(--muted);
+font-size: 12px;
+line-height: 2;
+}
+
+/* KONTAK */
+
+.contact > p:not(.section-label) {
+color: var(--muted);
+font-size: 13px;
+max-width: 600px;
+margin: 0 auto 25px;
+}
+
+/* FOOTER */
+
+footer {
+padding: 25px;
+text-align: center;
+color: var(--muted);
+font-size: 11px;
+border-top: 1px solid var(--border);
+}
+
+/* RESPONSIVE LAPTOP KECIL DAN TABLET */
+
+@media (max-width: 900px) {
+.navbar {
+padding: 22px 5%;
+}
+
+nav {
+    gap: 15px;
+}
+
+.hero {
+    padding: 70px 7%;
+    gap: 35px;
+}
+
+.hero-photo {
+    width: 270px;
+    height: 330px;
+}
+
+.section {
+    padding: 80px 7%;
+}
+
+.card-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 650px) {
+.navbar {
+flex-direction: column;
+gap: 18px;
+}
+
+nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    font-size: 12px;
+}
+
+.hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 55px 7%;
+    gap: 40px;
+}
+
+.hero-photo {
+    width: 230px;
+    height: 280px;
+}
+
+.hero h1 {
+    font-size: 39px;
+}
+
+.hero h2 {
+    font-size: 18px;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.section {
+    padding: 70px 7%;
+}
+
+.section h2 {
+    font-size: 29px;
+}
+
+.biodata {
+    grid-template-columns: 1fr;
+}
+
+.card-container {
+    grid-template-columns: 1fr;
+}
+
+}
